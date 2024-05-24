@@ -1,0 +1,59 @@
+<!-- activity_employee_list.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DepartmentActivity">
+
+    <LinearLayout
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/tv_emp_id"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_emp_name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/label">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view_emp_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_employee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Add new department" />
+
+</RelativeLayout>
